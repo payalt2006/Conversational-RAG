@@ -3,9 +3,14 @@ import os
 from langchain_groq import ChatGroq
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import PyPDFLoader
+from langchain_chroma import Chroma
+from langchain_huggingface import HuggingFaceEmbeddings
 from dotenv import load_dotenv
 
 load_dotenv()
+
+os.environ['HF_TOKEN'] = os.getenv('HF_TOKEN')
+embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
 ## Set up Streamlit UI
 st.title("Conversational RAG with PDF & Chat History")
@@ -31,4 +36,7 @@ if api_key:
         ## Split documents & create vector embeddings
         text_splitter = RecursiveCharacterTextSplitter(chunk_size=5000, chunk_overlap=500)
         splits = text_splitter.split_documents(documents)
-        st.write(f"Processed {len(splits)} text chunks from PDFs.")
+
+        vectorstore = Chroma.from_documents(splits, embedding=embeddings, persist_directory="./chroma_db")
+        retriever = vectorstore.as_retriever()
+        st.write("Vector database created and indexed.")

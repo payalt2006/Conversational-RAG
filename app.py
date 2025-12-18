@@ -2,6 +2,9 @@ import streamlit as st
 import os
 from langchain_groq import ChatGroq
 from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain.chains.combine_documents import create_stuff_documents_chain
+from langchain_core.prompts import ChatPromptTemplate
+from langchain.chains import create_retrieval_chain
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
@@ -39,4 +42,20 @@ if api_key:
 
         vectorstore = Chroma.from_documents(splits, embedding=embeddings, persist_directory="./chroma_db")
         retriever = vectorstore.as_retriever()
-        st.write("Vector database created and indexed.")
+
+        ## Setup Answer Generation
+        system_prompt = (
+            "You are an assistant for answering questions. "
+            "Use the retrieved context to provide accurate responses. "
+            "If you don’t know the answer, say so. "
+            "Keep answers concise (max 3 sentences).\n\n{context}"
+        )
+
+        qa_context = ChatPromptTemplate.from_messages([
+            ("system", system_prompt),
+            ("human", "{input}")
+        ])
+
+        question_answer_chain = create_stuff_documents_chain(llm, qa_context)
+        rag_chain = create_retrieval_chain(retriever, question_answer_chain)
+        st.write("RAG chain setup completed successfully.")

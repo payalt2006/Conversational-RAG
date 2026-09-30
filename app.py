@@ -27,7 +27,12 @@ st.write("Upload a PDF and chat with the model.")
 api_key = st.text_input("Enter your Groq API key:", type="password")
 
 if api_key:
-    llm = ChatGroq(groq_api_key=api_key, model_name="Gemma2-9b-It")
+    model_choice = st.selectbox(
+        "Select Groq Model:",
+        ["qwen/qwen3.8-27b", "llama-3.3-70b-versatile", "llama-3.1-8b-instant", "openai/gpt-oss-120b"],
+        index=0
+    )
+    llm = ChatGroq(groq_api_key=api_key, model_name=model_choice)
 
     ## Initialize session state for storing chat history
     if "store" not in st.session_state:

@@ -1,0 +1,427 @@
+{
+  "summary": {
+    "benchmark_timestamp": "2026-09-30 20:12:49",
+    "sample_pdf": "temp.pdf",
+    "total_questions": 20,
+    "evaluation_mode": "Live LLM Generation (Groq - qwen/qwen3.8-27b)",
+    "top_1_hit_rate": 95.0,
+    "top_3_hit_rate": 100.0,
+    "mean_reciprocal_rank": 0.9667,
+    "average_token_f1": 0.68,
+    "average_concept_recall": 79.17,
+    "overall_answer_accuracy": 90.0,
+    "average_latency_sec": 7.192
+  },
+  "results": [
+    {
+      "id": 1,
+      "category": "General & Overview",
+      "question": "What is the full title of this large language model survey paper?",
+      "ground_truth": "A Comprehensive Overview of Large Language Models",
+      "key_phrases": [
+        "Comprehensive Overview",
+        "Large Language Models"
+      ],
+      "expected_page": 1,
+      "retrieval_hit": true,
+      "first_hit_rank": 1,
+      "retrieved_page": 37,
+      "generated_answer": "The full title is \"A survey of large language models.\"",
+      "token_f1": 0.5882,
+      "concept_recall": 0.5,
+      "is_correct": true,
+      "latency_sec": 0.436
+    },
+    {
+      "id": 2,
+      "category": "Authorship",
+      "question": "Who are the first three primary authors of 'A Comprehensive Overview of Large Language Models'?",
+      "ground_truth": "Humza Naveed, Asad Ullah Khan, and Shi Qiu.",
+      "key_phrases": [
+        "Humza Naveed",
+        "Asad Ullah Khan",
+        "Shi Qiu"
+      ],
+      "expected_page": 1,
+      "retrieval_hit": true,
+      "first_hit_rank": 1,
+      "retrieved_page": 1,
+      "generated_answer": "The provided context does not list the names of the authors for the article.",
+      "token_f1": 0.0,
+      "concept_recall": 0.0,
+      "is_correct": false,
+      "latency_sec": 0.324
+    },
+    {
+      "id": 3,
+      "category": "Scope & Scale",
+      "question": "What parameter threshold is used in the survey to discuss pre-trained LLMs?",
+      "ground_truth": "The survey discusses pre-trained LLMs with 10B parameters or more.",
+      "key_phrases": [
+        "10B parameters",
+        "10B",
+        "parameters"
+      ],
+      "expected_page": 3,
+      "retrieval_hit": true,
+      "first_hit_rank": 1,
+      "retrieved_page": 3,
+      "generated_answer": "The survey discusses pre-trained LLMs with 10B parameters or more.",
+      "token_f1": 1.0,
+      "concept_recall": 1.0,
+      "is_correct": true,
+      "latency_sec": 0.439
+    },
+    {
+      "id": 4,
+      "category": "Taxonomy",
+      "question": "What are the seven branches into which LLMs are divided in Figure 3?",
+      "ground_truth": "The seven branches are Pre-Training, Fine-Tuning, Efficient, Inference, Evaluation, Applications, and Challenges.",
+      "key_phrases": [
+        "Pre-Training",
+        "Fine-Tuning",
+        "Inference",
+        "Evaluation",
+        "Applications",
+        "Challenges"
+      ],
+      "expected_page": 3,
+      "retrieval_hit": true,
+      "first_hit_rank": 1,
+      "retrieved_page": 3,
+      "generated_answer": "According to Figure 3, the seven branches of LLMs are: 1. Pre-Training, 2. Fine-Tuning, 3. Efficient, 4. Inference, 5. Evaluation, 6. Applications, and 7. Challenges.",
+      "token_f1": 0.7,
+      "concept_recall": 1.0,
+      "is_correct": true,
+      "latency_sec": 0.448
+    },
+    {
+      "id": 5,
+      "category": "Background & Architecture",
+      "question": "What is tokenization according to Section 2.1 of the background?",
+      "ground_truth": "Tokenization is an essential pre-processing step in LLM training that parses text into non-decomposing units called tokens, which can be characters, subwords, symbols, or words.",
+      "key_phrases": [
+        "pre-processing step",
+        "tokens",
+        "non-decomposing",
+        "characters",
+        "subwords"
+      ],
+      "expected_page": 4,
+      "retrieval_hit": true,
+      "first_hit_rank": 1,
+      "retrieved_page": 4,
+      "generated_answer": "According to Section 2.1, tokenization is an essential pre-processing step in LLM training that parses text into non-decomposing units called tokens. These tokens can be characters, subwords, symbols, or words, depending on the specific tokenization process used.",
+      "token_f1": 0.8,
+      "concept_recall": 1.0,
+      "is_correct": true,
+      "latency_sec": 0.408
+    },
+    {
+      "id": 6,
+      "category": "Libraries & Infrastructure",
+      "question": "What is the purpose of the DeepSpeed library according to Section 2.7?",
+      "ground_truth": "DeepSpeed is a library for scalable distributed training and inference of deep learning models.",
+      "key_phrases": [
+        "scalable distributed training",
+        "inference",
+        "deep learning models"
+      ],
+      "expected_page": 5,
+      "retrieval_hit": true,
+      "first_hit_rank": 1,
+      "retrieved_page": 5,
+      "generated_answer": "According to Section 2.7, DeepSpeed is a library designed for the scalable distributed training and inference of deep learning models.",
+      "token_f1": 0.8,
+      "concept_recall": 1.0,
+      "is_correct": true,
+      "latency_sec": 1.428
+    },
+    {
+      "id": 7,
+      "category": "Libraries & Infrastructure",
+      "question": "What does the Megatron-LM library provide according to the libraries section?",
+      "ground_truth": "Megatron-LM provides GPU-optimized techniques for large-scale training of LLMs.",
+      "key_phrases": [
+        "GPU-optimized",
+        "large-scale training",
+        "LLMs"
+      ],
+      "expected_page": 5,
+      "retrieval_hit": true,
+      "first_hit_rank": 1,
+      "retrieved_page": 5,
+      "generated_answer": "According to the libraries section, Megatron-LM provides GPU-optimized techniques for large-scale training of LLMs.",
+      "token_f1": 0.8276,
+      "concept_recall": 1.0,
+      "is_correct": true,
+      "latency_sec": 12.321
+    },
+    {
+      "id": 8,
+      "category": "Libraries & Infrastructure",
+      "question": "How is the JAX library described in the LLM training libraries section?",
+      "ground_truth": "JAX is a Python library for high-performance numerical computing and scalable machine learning that can differentiate native Python and NumPy functions and execute them on GPUs.",
+      "key_phrases": [
+        "numerical computing",
+        "Python library",
+        "differentiate native Python",
+        "NumPy",
+        "GPUs"
+      ],
+      "expected_page": 5,
+      "retrieval_hit": true,
+      "first_hit_rank": 1,
+      "retrieved_page": 5,
+      "generated_answer": "JAX is described as a Python library for high-performance numerical computing and scalable machine learning. It can differentiate native Python and NumPy functions and execute them on GPUs.",
+      "token_f1": 0.92,
+      "concept_recall": 1.0,
+      "is_correct": true,
+      "latency_sec": 8.705
+    },
+    {
+      "id": 9,
+      "category": "Training Objectives & Alignment",
+      "question": "What do the acronyms RL, RM, and RLHF stand for in the training stages of LLMs?",
+      "ground_truth": "RL stands for reinforcement learning, RM represents reward-modeling, and RLHF represents reinforcement learning with human feedback.",
+      "key_phrases": [
+        "reinforcement learning",
+        "reward-modeling",
+        "reinforcement learning with human feedback"
+      ],
+      "expected_page": 6,
+      "retrieval_hit": true,
+      "first_hit_rank": 1,
+      "retrieved_page": 6,
+      "generated_answer": "In the training stages of LLMs, \u201cRL\u201d stands for reinforcement learning, \u201cRM\u201d represents reward-modeling, and \u201cRLHF\u201d represents reinforcement learning with human feedback.",
+      "token_f1": 0.8235,
+      "concept_recall": 1.0,
+      "is_correct": true,
+      "latency_sec": 8.81
+    },
+    {
+      "id": 10,
+      "category": "Training Objectives & Alignment",
+      "question": "What is the training objective in Masked Language Modeling?",
+      "ground_truth": "Tokens or spans (sequences of tokens) are masked randomly and the model is trained to predict the masked tokens given past and future context.",
+      "key_phrases": [
+        "masked randomly",
+        "predict masked tokens",
+        "tokens"
+      ],
+      "expected_page": 6,
+      "retrieval_hit": true,
+      "first_hit_rank": 1,
+      "retrieved_page": 6,
+      "generated_answer": "In Masked Language Modeling, tokens or spans are randomly masked, and the model is asked to predict the masked tokens given the past and future context.",
+      "token_f1": 0.8205,
+      "concept_recall": 0.3333,
+      "is_correct": true,
+      "latency_sec": 7.641
+    },
+    {
+      "id": 11,
+      "category": "Fine-Tuning",
+      "question": "What is instruction-tuning and what is its main benefit?",
+      "ground_truth": "Instruction-tuning fine-tunes a pre-trained model on instruction-formatted data (instruction and input-output pairs) to improve zero-shot generalization and query response effectiveness.",
+      "key_phrases": [
+        "instruction-formatted data",
+        "zero-shot generalization",
+        "input-output"
+      ],
+      "expected_page": 7,
+      "retrieval_hit": true,
+      "first_hit_rank": 1,
+      "retrieved_page": 15,
+      "generated_answer": "Instruction-tuning is a fine-tuning process where models are trained on instruction-input-output pairs to improve their ability to follow user commands. Its main benefit is enhancing usability and zero-shot generalization abilities, making pre-trained models more effective at handling diverse tasks without needing task-specific training.",
+      "token_f1": 0.4776,
+      "concept_recall": 0.6667,
+      "is_correct": true,
+      "latency_sec": 11.087
+    },
+    {
+      "id": 12,
+      "category": "Model Architectures",
+      "question": "On what dataset and with how many languages was the multilingual mT5 model trained?",
+      "ground_truth": "mT5 was trained on the mC4 dataset with 101 languages and uses a vocabulary size of 250,000.",
+      "key_phrases": [
+        "mC4",
+        "101 languages",
+        "250,000"
+      ],
+      "expected_page": 8,
+      "retrieval_hit": true,
+      "first_hit_rank": 1,
+      "retrieved_page": 8,
+      "generated_answer": "The multilingual mT5 model was trained on the mC4 dataset, which was extracted from the public Common Crawl scrape. It supports 101 languages.",
+      "token_f1": 0.4737,
+      "concept_recall": 0.6667,
+      "is_correct": true,
+      "latency_sec": 14.76
+    },
+    {
+      "id": 13,
+      "category": "Model Architectures",
+      "question": "What dataset was GPT-NeoX-20B trained on, and what architectural choice improves its throughput?",
+      "ground_truth": "GPT-NeoX-20B was trained on the Pile dataset without deduplication and uses parallel attention and feed-forward layers in a transformer block to increase throughput by 15%.",
+      "key_phrases": [
+        "Pile",
+        "parallel attention",
+        "throughput by 15%"
+      ],
+      "expected_page": 9,
+      "retrieval_hit": true,
+      "first_hit_rank": 1,
+      "retrieved_page": 9,
+      "generated_answer": "GPT-NeoX-20B was trained on the Pile dataset. Its throughput is improved by 15% through the use of parallel attention and feed-forward layers within its transformer blocks.",
+      "token_f1": 0.7037,
+      "concept_recall": 0.6667,
+      "is_correct": true,
+      "latency_sec": 9.9
+    },
+    {
+      "id": 14,
+      "category": "Pre-Training Objectives",
+      "question": "What is the Mixture of Denoisers (MoD) objective in UL2, and what are its three denoisers?",
+      "ground_truth": "UL2 is trained using Mixture of Denoisers consisting of R-Denoiser (regular span masking), S-Denoiser (consecutive tokens corruption), and X-Denoiser (random token corruption).",
+      "key_phrases": [
+        "Mixture of Denoisers",
+        "R-Denoiser",
+        "S-Denoiser",
+        "X-Denoiser"
+      ],
+      "expected_page": 10,
+      "retrieval_hit": true,
+      "first_hit_rank": 1,
+      "retrieved_page": 10,
+      "generated_answer": "The Mixture of Denoisers (MoD) objective in UL2 is an encoder-decoder training approach that uses a denoiser token to switch between different corruption strategies, improving fine-tuning performance on downstream tasks. The three denoisers are: 1) R-Denoiser (regular span masking), 2) S-Denoiser (corrupts consecutive tokens of a large sequence), and 3) X-Denoiser (corrupts a large number of tokens randomly).",
+      "token_f1": 0.4722,
+      "concept_recall": 1.0,
+      "is_correct": true,
+      "latency_sec": 9.21
+    },
+    {
+      "id": 15,
+      "category": "Code LLMs",
+      "question": "What three datasets was CodeGen sequentially trained on?",
+      "ground_truth": "CodeGen was sequentially trained on the PILE, BIGQUERY, and BIGPYTHON datasets.",
+      "key_phrases": [
+        "PILE",
+        "BIGQUERY",
+        "BIGPYTHON"
+      ],
+      "expected_page": 11,
+      "retrieval_hit": true,
+      "first_hit_rank": 1,
+      "retrieved_page": 11,
+      "generated_answer": "CodeGen was sequentially trained on the PILE, BIGQUERY, and BIGPYTHON datasets.",
+      "token_f1": 1.0,
+      "concept_recall": 1.0,
+      "is_correct": true,
+      "latency_sec": 8.421
+    },
+    {
+      "id": 16,
+      "category": "Empirical Insights",
+      "question": "What findings and insights are reported for the OPT model regarding loss divergence and repetitive text?",
+      "ground_truth": "For OPT, training should restart from an earlier checkpoint with a lower learning rate if loss diverges, and the model is prone to generating repetitive text and getting stuck in loops.",
+      "key_phrases": [
+        "earlier checkpoint",
+        "lower learning rate",
+        "loss diverges",
+        "repetitive text"
+      ],
+      "expected_page": 13,
+      "retrieval_hit": true,
+      "first_hit_rank": 1,
+      "retrieved_page": 13,
+      "generated_answer": "For the OPT model, the reported findings indicate that if loss diverges, training should be restarted from an earlier checkpoint with a lower learning rate. Additionally, the model is prone to generating repetitive text and getting stuck in a loop.",
+      "token_f1": 0.8485,
+      "concept_recall": 1.0,
+      "is_correct": true,
+      "latency_sec": 7.647
+    },
+    {
+      "id": 17,
+      "category": "Parameter-Efficient Fine-Tuning",
+      "question": "What is LoRA (Low-Rank Adaptation) and how does it reduce fine-tuning parameters?",
+      "ground_truth": "Low-Rank Adaptation (LoRA) learns low-rank decomposed matrices to adapt attention weights during fine-tuning while keeping pre-trained model weights frozen.",
+      "key_phrases": [
+        "Low-Rank Adaptation",
+        "low-rank decomposed matrices",
+        "matrices"
+      ],
+      "expected_page": 21,
+      "retrieval_hit": true,
+      "first_hit_rank": 1,
+      "retrieved_page": 41,
+      "generated_answer": "LoRA (Low-Rank Adaptation) is a parameter-efficient fine-tuning method that learns low-rank decomposed matrices while keeping the original model weights frozen. It reduces the number of trainable parameters by approximating weight updates with smaller matrices, which are then fused with the original weights during inference to avoid additional latency.",
+      "token_f1": 0.5,
+      "concept_recall": 1.0,
+      "is_correct": true,
+      "latency_sec": 13.153
+    },
+    {
+      "id": 18,
+      "category": "Pre-Training & Data Quality",
+      "question": "What data cleaning steps are commonly performed for pre-trained LLMs according to Table 3?",
+      "ground_truth": "Data cleaning steps include heuristics (Heur), deduplication (Dedup), quality filtering (QF), and privacy filtering (PF).",
+      "key_phrases": [
+        "heuristics",
+        "deduplication",
+        "quality filtering",
+        "privacy filtering"
+      ],
+      "expected_page": 25,
+      "retrieval_hit": true,
+      "first_hit_rank": 1,
+      "retrieved_page": 25,
+      "generated_answer": "According to Table 3, the data cleaning steps indicated for pre-trained LLMs include heuristics (Heur), deduplication (Dedup), quality filtering (QF), and privacy filtering (PF).",
+      "token_f1": 0.7368,
+      "concept_recall": 1.0,
+      "is_correct": true,
+      "latency_sec": 9.254
+    },
+    {
+      "id": 19,
+      "category": "Context Windows & Scaling",
+      "question": "What context window capacity does Gemini-1.5 achieve as described in Section 3.1?",
+      "ground_truth": "Gemini-1.5 features a 2M context window and can reason over information up to 10M tokens.",
+      "key_phrases": [
+        "Gemini-1.5",
+        "2M context window",
+        "10M tokens"
+      ],
+      "expected_page": 10,
+      "retrieval_hit": true,
+      "first_hit_rank": 1,
+      "retrieved_page": 10,
+      "generated_answer": "Gemini-1.5 has a 2M context window and can reason over information up to 10M tokens.",
+      "token_f1": 0.9412,
+      "concept_recall": 1.0,
+      "is_correct": true,
+      "latency_sec": 9.581
+    },
+    {
+      "id": 20,
+      "category": "Safety, Trust & Challenges",
+      "question": "What challenges regarding explainability and trustworthiness of LLMs are discussed in the paper?",
+      "ground_truth": "The lack of insight into LLM operation limits their effectiveness and trustworthiness, requiring explainability efforts to promote user trust and responsible AI usage.",
+      "key_phrases": [
+        "lack of insight",
+        "trustworthiness",
+        "explainable",
+        "responsible AI"
+      ],
+      "expected_page": 35,
+      "retrieval_hit": true,
+      "first_hit_rank": 3,
+      "retrieved_page": 35,
+      "generated_answer": "The paper highlights that the \u201cblack-box\u201d nature of LLMs poses significant challenges for understanding their decision-making processes, which is crucial for broader acceptance and trust. Additionally, it notes that LLMs are vulnerable to adversarial attacks where slight input alterations can mislead them, necessitating robust evaluation tools to ensure reliability in safety-critical domains.",
+      "token_f1": 0.1667,
+      "concept_recall": 0.0,
+      "is_correct": false,
+      "latency_sec": 9.867
+    }
+  ]
+}

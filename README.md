@@ -79,10 +79,16 @@ pip install -r requirements.txt
 ```
 
 ### 4️⃣ Set Up Environment Variables
-Create a `.env` file in the root directory:
+Copy the example environment file and add your credentials:
+```bash
+cp .env.example .env
+# On Windows PowerShell:
+Copy-Item .env.example .env
+```
+Then configure your keys inside `.env`:
 ```ini
-HF_TOKEN="your-huggingface-token"
 GROQ_API_KEY="your-groq-api-key"
+HF_TOKEN="your-huggingface-token"
 ```
 
 > **Tip:** You can obtain a free, high-speed API key from the [Groq Console](https://console.groq.com/).
@@ -144,6 +150,7 @@ python eval.py --pdf ./temp.pdf --top_k 3 --output eval_results.json --report ev
 │-- 📜 eval_report.md          # Generated benchmark Markdown report
 │-- 📜 eval_results.json       # Generated benchmark JSON metrics artifact
 │-- 📜 requirements.txt        # Python package dependencies
+│-- 📜 .env.example            # Environment configuration template (git-tracked)
 │-- 📜 .env                    # Local environment variables (API keys - gitignored)
 │-- 📜 .gitignore              # Files and directories ignored by Git
 │-- 📜 README.md               # Project documentation
